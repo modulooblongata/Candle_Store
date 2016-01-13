@@ -8,7 +8,7 @@ class OrdersController < ApplicationController
 		)
 		
 		if @order_form.save
-			notify_user
+			#notify_user
 			redirect_to root_path, notice: "Thank you for your order!"
 		else
 			render "carts/checkout"
