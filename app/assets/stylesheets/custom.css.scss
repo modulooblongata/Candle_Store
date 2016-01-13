@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC:700);
+
+$bgDefault      : #207a7b;
+$bgHighlight    : #696969;
+$nbBrand				: #ffffff;
+$nbDefault			: #ffffff;
+
+.logo {
+	float: left;
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	margin-top: 7px;
+}
+.tagline {
+	margin: -50px 0px 9px;
+	color: $nbBrand;
+	font-family:'Amatic SC', cursive;
+	font-size: 2em;
+}
+
+.navbar {
+	background: url(../assets/banner.png) no-repeat 0px;
+	border-radius: 0px;
+	border-top: none;
+	border-bottom: 3px solid $bgDefault;
+	background-size: 100%;
+}
+.navbar-header {
+	height: 135px;
+}
+.navbar-inverse {
+	.navbar-brand {
+		color: $nbBrand;
+		font-family: 'Dancing Script', cursive;
+		font-size: 2.5em;
+			:hover {
+				color: $nbBrand;
+			}
+	}
+	.navbar-nav {
+		.active a {
+				color: $nbDefault;
+				background-color: rgba(21, 21, 21, 0.5);
+			}
+		.active {
+			a:hover {
+				background-color: rgba(32, 122, 123, 0.5);
+			}
+			a:focus {
+				background-color: rgba(21, 21, 21, 0.5);
+			}
+		}
+		li > a {
+			color: $nbDefault;
+		}
+	}
+}
