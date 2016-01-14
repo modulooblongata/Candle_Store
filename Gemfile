@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
-gem 'sqlite3'
 gem 'bcrypt',                  '3.1.10'
 gem 'faker',                   '1.4.2'
 gem 'net-ssh'
@@ -37,6 +36,7 @@ gem 'country_select'
 gem 'braintree'
 
 group :development do
+	gem 'sqlite3',     '1.3.11'
   gem 'html2haml'
   gem 'spring', '1.1.3'
 end
