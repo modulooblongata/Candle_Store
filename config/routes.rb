@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get 'static_pages/home'
-
   get 'static_pages/about'
 
   devise_for :users
@@ -13,5 +12,5 @@ Rails.application.routes.draw do
 
   resources :orders, only: [ :index, :show, :create]
 
-  root 'products#index'
+  root 'static_pages#home'
 end
