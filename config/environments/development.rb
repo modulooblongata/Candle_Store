@@ -47,8 +47,9 @@ Rails.application.configure do
       user_name: ENV["SMTP_USER"],
       password: ENV["SMTP_PASSWORD"],
       domain: "gmail.com",
-      authentication: :plain,
-      enable_starttls_auto: false
+      port: 587,
+      authentication: :login,
+      enable_starttls_auto: true
   }
 
   Braintree::Configuration.environment = :sandbox
