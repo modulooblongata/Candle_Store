@@ -30,11 +30,11 @@
 
 					%p.col-md-6=u.text_field :phone, class: "form-control", placeholder: "Phone"
 
-		#payment-form
+		#dropin
 
 		%p=f.submit "Place order", class: "btn btn-primary"
 
 :javascript
 	braintree.setup("#{@client_token}", "dropin", {
-		container: "payment-form"
+		container: "dropin"
 		});

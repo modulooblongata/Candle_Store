@@ -36,12 +36,13 @@ gem 'country_select'
 gem 'braintree'
 
 group :development do
-	gem 'sqlite3',     '1.3.11'
   gem 'html2haml'
-  gem 'spring', '1.1.3'
 end
 
 group :development, :test do
+	gem 'sqlite3',     '1.3.11'
+	gem 'byebug',      '3.4.0'
+	gem 'spring', '1.1.3'
   gem 'pry-rails'
 end
 
