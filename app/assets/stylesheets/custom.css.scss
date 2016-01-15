@@ -3,16 +3,44 @@
 
 $bgDefault      : #207a7b;
 $bgHighlight    : #696969;
-$nbBrand				: #ffffff;
-$nbDefault			: #ffffff;
+$nbBrand				: #666;
+$nbDefault			: #666;
+$bgColor				: #fff;
+$navbgColor			: #d6d8dc;
+
+a {
+	color: $bgDefault;
+}
+
+h1, h2, h3 {
+	font-family:'Amatic SC', cursive;
+}
+
+.btn-primary {
+	background-color: $bgDefault;
+	border-color: $bgHighlight;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: $bgHighlight;
+}
+
+.nav {
+	font-family:'Amatic SC', cursive;
+}
 
 .logo {
-	float: left;
 	border-radius: 50%;
 	width: 120px;
 	height: 120px;
-	margin-top: 7px;
+	position: relative;
+	margin-top: 0.5em;
 }
+
+#logo-text {
+		font-family: 'Dancing Script', cursive;
+}
+
 .tagline {
 	margin: -50px 0px 9px;
 	color: $nbBrand;
@@ -21,16 +49,17 @@ $nbDefault			: #ffffff;
 }
 
 .navbar {
-	background: url(../assets/banner.png) no-repeat 0px;
+	background-color: $navbgColor;
 	border-radius: 0px;
 	border-top: none;
 	border-bottom: 3px solid $bgDefault;
 	background-size: 100%;
+	font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 .navbar-header {
 	height: 135px;
 }
-.navbar-inverse {
+.navbar-default {
 	.navbar-brand {
 		color: $nbBrand;
 		font-family: 'Dancing Script', cursive;
@@ -40,20 +69,47 @@ $nbDefault			: #ffffff;
 			}
 	}
 	.navbar-nav {
+		font-size: 1.8em;
+		width: 100%;
+		text-align: center;
 		.active a {
-				color: $nbDefault;
-				background-color: rgba(21, 21, 21, 0.5);
+				color: $bgDefault;
+				background-color: transparent;
 			}
 		.active {
 			a:hover {
-				background-color: rgba(32, 122, 123, 0.5);
+				color: $bgDefault;
+				background-color: transparent;
 			}
 			a:focus {
-				background-color: rgba(21, 21, 21, 0.5);
+				background-color: transparent;
 			}
+		}
+		li {
+			float: none;
+      display: inline-block;
+		}
+		li:nth-child(4) a {
+			padding-left: 50px;
 		}
 		li > a {
 			color: $nbDefault;
+			padding-top: 80px;
+			padding-right: 50px;
 		}
 	}
+}
+
+@media (max-width:767px) { 
+	.navbar-default {
+		.navbar-nav {
+			font-size: 2.5em;
+			li > a {
+				padding-top: 20px;
+			}
+			li:nth-child(4) a {
+				padding-left: 15px;
+			}
+ 		}
+ 	}
 }
