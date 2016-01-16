@@ -68,7 +68,7 @@ EOF
 
 	def order_params
 		params.require(:order_form).permit(
-			user: [ :name, :email, :phone, :address, :city, :country, :postal_code ]
+			user: [ :name, :email, :phone, :address, :city, :country, :us_state, :postal_code ]
 			)
 	end
 
