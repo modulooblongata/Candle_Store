@@ -7,7 +7,6 @@ gem 'net-ssh'
 gem 'font-awesome-rails'
 gem 'carrierwave',             '0.10.0'
 gem 'mini_magick',             '3.8.0'
-gem 'puma',           '2.11.1'
 gem 'fog',                     '1.33.0'
 gem 'will_paginate',           '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
@@ -55,4 +54,8 @@ end
 group :production do
   gem 'pg',             '0.17.1'
   gem 'rails_12factor', '0.0.2'
+end
+
+group :production, :development do
+	gem 'puma',           '2.11.1'
 end
