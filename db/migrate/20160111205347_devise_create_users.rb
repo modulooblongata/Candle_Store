@@ -32,10 +32,11 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
       t.string :name
       t.string :address
-      t.string :phone
+      t.string :city
       t.string :postal_code
       t.string :country
-      t.string :city
+      t.string :us_state
+      t.string :phone
 
       t.timestamps null: false
     end

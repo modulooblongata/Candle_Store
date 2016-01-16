@@ -1,6 +1,10 @@
 class OrdersController < ApplicationController
   before_filter :initialize_cart
 
+  def index
+    @orders = Order.order(created_at: :desc).all
+  end
+
   def create
     @order_form = OrderForm.new(
       user: User.new(order_params[:user]),
@@ -9,7 +13,7 @@ class OrdersController < ApplicationController
 
     if @order_form.save
       notify_user
-      if false #charge_user
+      if true #charge_user
         redirect_to root_path, notice: "Thank you for your order!"
       else
         flash[:warning] = <<EOF
@@ -24,6 +28,15 @@ EOF
     end
   end
 
+  def update
+    @order = Order.find params[:id]
+    @previous_state = @order.state
+
+    if @order.update state_order_params
+      notify_user_about_state
+      redirect_to orders_path, notice: "Order was updated."
+    end
+  end
 
   def new_payment
     @order = Order.find params[:id]
@@ -48,6 +61,11 @@ EOF
     OrderMailer.order_confirmation(@order_form.order).deliver
   end
 
+  def notify_user_about_state
+    OrderMailer.state_changed(@order, @previous_state).deliver
+  end
+
+
 	def order_params
 		params.require(:order_form).permit(
 			user: [ :name, :email, :phone, :address, :city, :country, :postal_code ]
@@ -58,5 +76,9 @@ EOF
     transaction = OrderTransaction.new @order, params[:payment_method_nonce]
     transaction.execute
     transaction.ok?
+  end
+
+  def state_order_params
+    params.require(:order).permit(:state)
   end
 end

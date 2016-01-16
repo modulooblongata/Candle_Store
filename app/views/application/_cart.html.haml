@@ -1,5 +1,6 @@
 -if @cart
 	-if @cart.empty?
+		%i.fa.fa-shopping-cart 
 		Your cart is empty.
 	-else
 		=link_to cart_path do

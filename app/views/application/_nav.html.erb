@@ -16,7 +16,15 @@
         <li><%= link_to "Home", root_path %></li>
         <li class="active"><%= link_to "Shop", products_path %></li>
         <li><%= image_tag("logo.png", class: "logo hidden-xs", :alt => "logo") %><p id="logo-text">Sweet Incendiaries</p></li>
-        <li><%= link_to "About", static_pages_about_path %></li>
+        <li><%= link_to "About Us", static_pages_about_path %></li>
+        <li>
+          <% if user_signed_in? %>
+            Logged in as <%= current_user.name %>.
+            <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+          <% else %>
+            <%= link_to "Login", new_user_session_path, class: "navbar-link" %>
+          <% end %>
+        </li>
         <li><%= render "cart" %></li>
       </ul>
     </div><!-- /.navbar-collapse -->

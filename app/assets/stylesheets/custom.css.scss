@@ -8,7 +8,14 @@ $nbDefault			: #666;
 $bgColor				: #fff;
 $navbgColor			: #d6d8dc;
 
+a, p, table {
+	font-family: "Droid-sans";
+}
 a {
+	color: $bgDefault;
+}
+
+a:hover {
 	color: $bgDefault;
 }
 
@@ -27,6 +34,9 @@ h1, h2, h3 {
 
 .nav {
 	font-family:'Amatic SC', cursive;
+		a {
+			font-family:'Amatic SC', cursive;
+		}
 }
 
 .logo {
@@ -49,11 +59,10 @@ h1, h2, h3 {
 }
 
 .navbar {
-	background-color: $navbgColor;
+	background: $navbgColor url("symphony.png") repeat right top; /* Background pattern from subtlepatterns.com */
 	border-radius: 0px;
 	border-top: none;
 	border-bottom: 3px solid $bgDefault;
-	background-size: 100%;
 	font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 .navbar-header {
