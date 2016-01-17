@@ -19,7 +19,11 @@ a:hover {
 	color: $bgDefault;
 }
 
-h1, h2, h3 {
+p {
+	font-size: 1.2em;
+}
+
+h1, h2, h3, h4 {
 	font-family:'Amatic SC', cursive;
 }
 
@@ -63,7 +67,6 @@ h1, h2, h3 {
 	border-radius: 0px;
 	border-top: none;
 	border-bottom: 3px solid $bgDefault;
-	font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 .navbar-header {
 	height: 135px;
@@ -106,6 +109,16 @@ h1, h2, h3 {
 			padding-top: 80px;
 			padding-right: 50px;
 		}
+	}
+}
+
+footer  {
+	background: $navbgColor url("symphony.png") repeat right top; /* Background pattern from subtlepatterns.com */
+	border-radius: 0px;
+	border-top: 3px solid $bgDefault;
+	margin-top: 4em;
+	.nav, .nav a {
+		font-family: "Droid-sans";
 	}
 }
 
