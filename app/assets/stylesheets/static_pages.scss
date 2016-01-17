@@ -1,3 +1,66 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.carousel {
+	width: 100%;
+}
+
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+        
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}
+
+.carousel-caption {
+	text-align: left;
+	text-shadow: none;
+	background-color: rgba(21, 21, 21, 0.5);
+	padding-left: 2em;
+		h2 {
+			font-family: "Droid Sans";
+			font-size: 1.4em;
+			font-style: italic;
+		}
+}
+
+html, 
+body, 
+.carousel, 
+.carousel-inner, 
+.carousel-inner .item {
+    width: 100%;
+}
+
+//.item:nth-child(1) {
+   // background: #74C390;
+//}
+
+//.item:nth-child(2) {
+   // background: #51BCE8;
+//}
+
+//.item:nth-child(3) {
+//    background: #E46653;
+//}
