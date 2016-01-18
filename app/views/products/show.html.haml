@@ -1,12 +1,18 @@
-%h1= @product.name
-%p= @product.description
-%p= number_to_currency @product.price
-%p= image_tag @product.image, height: "300"
-
-%p= link_to "Add to cart", add_cart_path, method: :post, class: "btn btn-primary"
-
--if current_user && current_user.admin?
+%div.well.col-md-6.col.col-md-offset-1
+	%h1= @product.name
 	%p
-		= link_to 'Edit', edit_product_path(@product)
-		\|
-		= link_to 'Back', products_path
+		%em= @product.description
+	%p= image_tag "Candle_Default.png", height: "300"
+	%p
+		%strong= number_to_currency @product.price
+	%p
+		Scent Profile: 
+		= @product.category.name
+
+	%p= link_to "Add to cart", add_cart_path, method: :post, class: "btn btn-primary"
+
+	-if current_user && current_user.admin?
+		%p
+			= link_to 'Edit', edit_product_path(@product)
+			\|
+			= link_to 'Back', products_path

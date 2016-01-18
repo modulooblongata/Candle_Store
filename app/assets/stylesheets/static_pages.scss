@@ -52,3 +52,18 @@ body,
 .carousel-inner .item {
     width: 100%;
 }
+
+@media (max-width:530px) {
+  .carousel {
+    h1 {
+    font-size: 1.6em;
+    }
+  }
+  .carousel-caption {
+    padding: 1em 1em 1em 1em;
+        h2 {
+        font-size: 1em;
+        margin-top: 0.8em;
+        }
+    }
+}
