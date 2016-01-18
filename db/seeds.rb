@@ -60,7 +60,8 @@ Product.create!([
       description: "Get cozy with freshly-cut spruce and sweet holiday citrus. 8 oz soy candle.",
       category_id: 5
       },
-      [name: "After Dinner Mint",
+      {
+      name: "After Dinner Mint",
       price: 10.99,
       description: "Peppermint infused with milk chocolate. Perfect for any occassion. 8 oz soy candle.",
       category_id: 1
