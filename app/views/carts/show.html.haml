@@ -7,13 +7,14 @@
 			%th Product
 			%th Price
 
+
 	-@cart.items.each do |item|
 		%tr
 			%td=item.quantity
 			%td
 				=image_tag item.product.image.thumb
 				=link_to item.product.name, item.product
-			%td.text-right=number_to_currency item.total_price
+			%td=number_to_currency item.total_price
 	%tfoot
 		%tr
 			%td.text-right(colspan=3)
@@ -21,4 +22,7 @@
 					Total:
 					=number_to_currency @cart.total_price
 
-%p=link_to "Checkout", checkout_cart_path, class: "btn btn-primary"
+%p=link_to "Checkout", checkout_cart_path, class: "btn btn-primary", disabled: true
+%p 
+	Sweet Incendiaries is a demo website and not built for production-level transactions. To see the application in development, please visit 
+	%a= link_to "the Github page.", "https://github.com/modulooblongata/Candle_Store"
