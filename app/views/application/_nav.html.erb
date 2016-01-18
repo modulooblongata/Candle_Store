@@ -8,6 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      <%= link_to "Sweet Incendiaries", root_path, class: "navbar-brand hidden-sm hidden-md hidden-lg" %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -15,7 +16,7 @@
       <ul class="nav navbar-nav">
         <li><%= link_to "Home", root_path %></li>
         <li class="active"><%= link_to "Shop", products_path %></li>
-        <li><%= image_tag("logo.png", class: "logo hidden-xs", :alt => "logo") %><p id="logo-text">Sweet Incendiaries</p></li>
+        <li><%= image_tag("logo.png", class: "logo hidden-xs", :alt => "logo") %><p id="logo-text" class="hidden-xs">Sweet Incendiaries</p></li>
         <li><%= link_to "About Us", static_pages_about_path %></li>
         <li>
           <% if user_signed_in? %>

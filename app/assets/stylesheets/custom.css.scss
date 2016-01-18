@@ -106,6 +106,19 @@ h1, h2, h3, h4 {
 		}
 	}
 }
+@media (max-width:880px) {
+	.navbar-default {
+		.navbar-nav {
+			li:nth-child(4) a {
+				padding-left: 30px;
+				padding-right: 10px;
+			}
+			li > a {
+				padding-right: 30px;
+			}
+		}
+	}
+}
 
 footer  {
 	background: $navbgColor url("darksymphony.png") repeat right top; /* Background pattern from subtlepatterns.com */
