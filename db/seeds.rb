@@ -35,7 +35,7 @@ Product.create!([
       price: 9.99,
       description: "Sensually floral, jasmine evokes romance and serves as a stress reliever.",
       category_id: 2
-      }
+      },
       {
       name: "Lemon Pound Cake",
       price: 10.99,
