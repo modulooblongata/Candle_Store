@@ -39,37 +39,37 @@ Product.create!([
       {
       name: "Lemon Pound Cake",
       price: 10.99,
-      description: "Sweet, zesty, and straight from the oven. 8 oz soy candle.",
+      description: "Sweet, zesty, and straight from the oven.",
       category_id: 4
       },
       {
       name: "Autumn Rain",
       price: 8.99,
-      description: "Brisk air and crisp leaves. The essence of fall. 8 oz soy candle.",
+      description: "Brisk air and crisp leaves. The essence of fall.",
       category_id: 5
       },
       {
       name: "German's Cake",
       price: 10.99,
-      description: "This famous dessert was actually invented by American chocolatier Sam German. Nice try, Germany. 8 oz soy candle.",
+      description: "This famous dessert was actually invented by American chocolatier Sam German. Nice try, Germany.",
       category_id: 4
       },
       {
       name: "Christmas Tree",
       price: 10.99,
-      description: "Get cozy with freshly-cut spruce and sweet holiday citrus. 8 oz soy candle.",
+      description: "Get cozy with freshly-cut spruce and sweet holiday citrus.",
       category_id: 5
       },
       {
       name: "After Dinner Mint",
       price: 10.99,
-      description: "Peppermint infused with milk chocolate. Perfect for any occassion. 8 oz soy candle.",
+      description: "Peppermint infused with milk chocolate. Perfect for any occassion.",
       category_id: 1
       },
       {
       name: "Cookies for Santa",
       price: 9.99,
-      description: "Sweet buttery cream, cookie dough, and vanilla make for a tempting winter treat. 8 oz soy candle.",
+      description: "Sweet buttery cream, cookie dough, and vanilla make for a tempting winter treat.",
       category_id: 5
       }
 
