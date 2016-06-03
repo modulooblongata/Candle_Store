@@ -5,3 +5,5 @@ This is an e-commerce website built with Ruby on Rails
 * Puma Webserver
 
 * Devise gem for user authentication
+
+* Payments with Braintree
